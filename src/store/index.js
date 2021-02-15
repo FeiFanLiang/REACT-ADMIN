@@ -1,5 +1,6 @@
-import {createStore} from 'redux';
-
+import {createStore,applyMiddleware} from 'redux';
+import ReduxThunk from 'redux-thunk';
+import ReduxLogger from 'redux-logger';
 
 const initialState = {
     token:"",
@@ -13,4 +14,4 @@ const appStore = (state = initialState,action) => {
     }
 }
 
-export default createStore(appStore)
+export default createStore(appStore,applyMiddleware(ReduxThunk,ReduxLogger))

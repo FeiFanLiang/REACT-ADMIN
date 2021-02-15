@@ -3,7 +3,7 @@ module.exports = function (app) {
     app.use(
         '/api',
         proxy({
-            target : 'http://testportal1.aimmcloud.com/api',
+            target : 'http://testportal1.aimmcloud.com',
             changeOrigin : true
         })
     );
